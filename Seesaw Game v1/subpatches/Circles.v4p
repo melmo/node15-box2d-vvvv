@@ -1,0 +1,297 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.2.dtd" >
+   <PATCH nodename="D:\box2d playground\Subpatches\Circles.v4p" filename="D:\box2d playground\Subpatches\Circles.v4p" systemname="Circles">
+   <BOUNDS height="10215" left="11070" top="2295" type="Window" width="6525">
+   </BOUNDS>
+   <NODE componentmode="Hidden" debug="0" id="13" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
+   <BOUNDS height="270" left="1275" top="4785" type="Node" width="3930">
+   </BOUNDS>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1">
+   </PIN>
+   <PIN pinname="Rotate" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" debug="0" id="12" nodename="Vector (2d Split)" systemname="Vector (2d Split)">
+   <BOUNDS height="100" left="1830" top="4155" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="TranslateX" srcnodeid="12" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="TranslateY" srcnodeid="12" srcpinname="Y">
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" id="11" nodename="Multiply (Value)" systemname="Multiply (Value)">
+   <BOUNDS height="100" left="2955" top="4170" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="ScaleX" srcnodeid="11" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="ScaleY" srcnodeid="11" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" id="10" nodename="GridSegment (DX9)" systemname="GridSegment (DX9)">
+   <BOUNDS height="270" left="1110" top="7785" type="Node" width="1890">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Circles">
+   </PIN>
+   <PIN pinname="Inner Radius" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Resolution">
+   </PIN>
+   <PIN pinname="Cycles" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Resolution X" slicecount="1" visible="1" values="30">
+   </PIN>
+   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Coord Mapping" slicecount="1" values="FrontProjected_XY">
+   </PIN>
+   <PIN pinname="Texture Transform" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Transform" srcnodeid="13" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" id="9" nodename="GetCircles (Box2d)" systemname="GetCircles (Box2d)">
+   <BOUNDS height="100" left="1845" top="3375" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Shapes" visible="1">
+   </PIN>
+   <PIN pinname="Radius" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Local Coordinates" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Body Id" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="11" dstpinname="Input 1" srcnodeid="9" srcpinname="Radius">
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" id="8" nodename="GetBodyDetails (Box2d)" systemname="GetBodyDetails (Box2d)">
+   <BOUNDS height="100" left="1785" top="1320" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Bodies" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Custom" visible="1">
+   </PIN>
+   <PIN pinname="Shapes" visible="1">
+   </PIN>
+   <PIN pinname="Rotation" visible="1">
+   </PIN>
+   <PIN pinname="Is Dynamic" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Rotate" srcnodeid="8" srcpinname="Rotation">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Shapes" srcnodeid="8" srcpinname="Shapes" linkstyle="PolyLine" hiddenwhenlocked="0">
+   </LINK>
+   <NODE componentmode="Hidden" id="7" nodename="S (Node)" systemname="S (Node)">
+   <BOUNDS height="100" left="1785" top="5805" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="6" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="2010" top="5430" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="2010" top="5430" type="Box" width="1575">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="CirclesTransformOut">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Send String" srcnodeid="6" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Input Value" srcnodeid="13" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="5" nodename="S (Value)" systemname="S (Value)" hiddenwhenlocked="1">
+   <BOUNDS height="100" left="4185" top="2790" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (String)" systemname="IOBox (String)" hiddenwhenlocked="1">
+   <BOUNDS height="0" left="4440" top="2385" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="255" left="4440" top="2385" type="Box" width="1425">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="CirclesIsDynamic">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Send String" srcnodeid="4" srcpinname="Output String" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="4455" y="2715">
+   </LINKPOINT>
+   <LINKPOINT x="4455" y="2715">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="5" dstpinname="Input Value" srcnodeid="8" srcpinname="Is Dynamic" linkstyle="PolyLine" hiddenwhenlocked="1">
+   </LINK>
+   <NODE componentmode="Hidden" id="3" nodename="S (String)" systemname="S (String)" hiddenwhenlocked="1">
+   <BOUNDS height="100" left="4005" top="2340" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (String)" systemname="IOBox (String)" hiddenwhenlocked="1">
+   <BOUNDS height="0" left="4260" top="1950" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="255" left="4260" top="1950" type="Box" width="1575">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="CirclesCustomNames">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Send String" srcnodeid="2" srcpinname="Output String" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="4275" y="2273">
+   </LINKPOINT>
+   <LINKPOINT x="4275" y="2273">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Input Value" srcnodeid="8" srcpinname="Custom" linkstyle="PolyLine" hiddenwhenlocked="1">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="XY" srcnodeid="9" srcpinname="PositionXY">
+   </LINK>
+   <NODE componentmode="Hidden" id="1" nodename="R (Node)" systemname="R (Node)">
+   <BOUNDS height="100" left="1785" top="825" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Receive String">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
+   <BOUNDS height="0" left="1785" top="420" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1785" top="420" type="Box" width="1125">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="CircleBodies">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Receive String" srcnodeid="0" srcpinname="Output Enum">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Bodies" srcnodeid="1" srcpinname="Input Value">
+   </LINK>
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="1125" top="8670" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1125" top="8670" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Input Node" srcnodeid="10" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Send String" srcnodeid="17" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="InABox" id="17" nodename="IOBox (String)" systemname="IOBox (String)">
+   <PIN pinname="Output String">
+   </PIN>
+   <BOUNDS height="0" left="3780" top="7410" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="285" left="3780" top="7410" type="Box" width="1350">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="CirclesResolution">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="16" nodename="S (Value)" systemname="S (Value)">
+   <PIN pinname="Send String">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="3525" top="7815" type="Node" width="100">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="InABox" id="15" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="30">
+   </PIN>
+   <BOUNDS height="0" left="3540" top="7035" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="3540" top="7035" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="16" dstpinname="Input Value" srcnodeid="15" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Resolution X" linkstyle="PolyLine" srcnodeid="15" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="65" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="0" left="2715" top="8505" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="2715" top="8505" type="Box" width="2250">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" values="|0.12883,0.12883,0.12883,1.00000|">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Color">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Color" linkstyle="Bezier" srcnodeid="65" srcpinname="Color Output">
+   <LINKPOINT x="2865" y="8353">
+   </LINKPOINT>
+   <LINKPOINT x="2025" y="8403">
+   </LINKPOINT>
+   </LINK>
+   </PATCH>
