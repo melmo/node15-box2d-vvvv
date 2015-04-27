@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v1\_stabilize.v4p" systemname="_stabilize" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\_stabilize.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="276" top="216" width="13716" height="11352">
+   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\Seesaw Game v1\_stabilize.v4p" systemname="_stabilize" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\_stabilize.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="756" top="1236" width="13716" height="11352">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
