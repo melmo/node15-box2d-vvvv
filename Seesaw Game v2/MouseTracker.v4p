@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\MouseTracker.v4p" systemname="MouseTracker" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\MouseTracker.v4p">
-   <BOUNDS type="Window" left="864" top="1068" width="11904" height="7896">
+   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\Seesaw Game v2\MouseTracker.v4p" systemname="MouseTracker" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\MouseTracker.v4p">
+   <BOUNDS type="Window" left="6408" top="2088" width="8976" height="7896">
    </BOUNDS>
    <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="14">
    <BOUNDS type="Node" left="1788" top="4116" width="100" height="100">
@@ -188,4 +188,18 @@
    </LINK>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5016" top="924" width="7092" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5016" top="924" width="2316" height="972">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|select a random next colour after the mouse click. Send it so that the new falling box will be the same colour|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

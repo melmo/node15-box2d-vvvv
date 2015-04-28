@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\DeleteFallingBoxes.v4p" systemname="DeleteFallingBoxes" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\DeleteFallingBoxes.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="1056" top="732" width="14460" height="11148">
+   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\Seesaw Game v2\DeleteFallingBoxes.v4p" systemname="DeleteFallingBoxes" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\DeleteFallingBoxes.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="6396" top="4788" width="13608" height="6780">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
@@ -257,11 +257,11 @@
    <LINK srcnodeid="46" srcpinname="Body Id" dstnodeid="145" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="151" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3060" top="6252" width="3480" height="240">
+   <BOUNDS type="Node" left="10224" top="4728" width="3480" height="240">
    </BOUNDS>
-   <BOUNDS type="Box" left="3060" top="6252" width="3588" height="1152">
+   <BOUNDS type="Box" left="10224" top="4728" width="3588" height="1152">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|for each, chck if more than one contact, if so, delete|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Sort the bodies into groups by colour&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -275,7 +275,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3132" top="5208" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="13740" top="492" width="9000" height="10896">
+   <BOUNDS type="Window" left="9144" top="852" width="10608" height="8820">
    </BOUNDS>
    <PIN pinname="Slices" visible="1" slicecount="6" values="62,44,42,38,25,22">
    </PIN>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\DoDestroy.v4p" systemname="DoDestroy" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\DoDestroy.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="13740" top="492" width="9000" height="10896">
+   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\Seesaw Game v2\DoDestroy.v4p" systemname="DoDestroy" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\DoDestroy.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="9144" top="852" width="10608" height="8820">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
@@ -214,4 +214,18 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Input">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5496" top="2280" width="8148" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5496" top="2280" width="3240" height="672">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|if the body has more than one contact it needs to be destroyed. Need to also check for 4 or more in contact and delete them.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

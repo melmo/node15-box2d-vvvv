@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\_stabilize.v4p" systemname="_stabilize" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\_stabilize.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\Seesaw Game v2\_stabilize.v4p" systemname="_stabilize" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\_stabilize.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="300" top="444" width="15312" height="11352">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
@@ -82,10 +82,10 @@
    </NODE>
    <LINK srcnodeid="5" srcpinname="Input Value" dstnodeid="3" dstpinname="World">
    </LINK>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="8244" top="10512" width="100" height="100">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="6">
+   <BOUNDS type="Node" left="7992" top="10152" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8244" top="10512" width="2400" height="1800">
+   <BOUNDS type="Box" left="7992" top="10152" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="16044" top="384" width="6216" height="4980">
    </BOUNDS>
@@ -123,7 +123,7 @@
    <LINK srcnodeid="9" srcpinname="Input Value" dstnodeid="3" dstpinname="Do Create">
    </LINK>
    <NODE systemname="GetBodyDetails (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="GetBodyDetails (Box2d)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="6384" top="7260" width="100" height="100">
+   <BOUNDS type="Node" left="6132" top="6900" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Bodies" visible="1" slicecount="1" values="||">
    </PIN>
@@ -151,7 +151,7 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="6372" top="6828" width="100" height="100">
+   <BOUNDS type="Node" left="6120" top="6468" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -161,7 +161,7 @@
    <LINK srcnodeid="18" srcpinname="Input Value" dstnodeid="14" dstpinname="Bodies">
    </LINK>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="8244" top="10056" width="100" height="100">
+   <BOUNDS type="Node" left="7992" top="9696" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
@@ -189,7 +189,7 @@
    <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="3" dstpinname="Custom">
    </LINK>
    <NODE systemname="GetPolygons (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="GetPolygons (Box2d)" componentmode="Hidden" id="34">
-   <BOUNDS type="Node" left="7848" top="7752" width="100" height="100">
+   <BOUNDS type="Node" left="7596" top="7392" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Shapes" visible="1">
    </PIN>
@@ -201,7 +201,7 @@
    <LINK srcnodeid="14" srcpinname="Shapes" dstnodeid="34" dstpinname="Shapes">
    </LINK>
    <NODE systemname="Polygon (EX9.Geometry 2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\2dMeshNodes.dll" nodename="Polygon (EX9.Geometry 2d)" componentmode="Hidden" id="36">
-   <BOUNDS type="Node" left="7896" top="8208" width="100" height="100">
+   <BOUNDS type="Node" left="7644" top="7848" width="100" height="100">
    </BOUNDS>
    <PIN pinname="VerticesXY" visible="1" slicecount="8" values="-0.01,-0.602876243591309,0.01,-0.602876243591309,0.01,-0.592876243591309,-0.01,-0.592876243591309">
    </PIN>
@@ -213,7 +213,7 @@
    <LINK srcnodeid="34" srcpinname="Vertices Count" dstnodeid="36" dstpinname="Vertex Count">
    </LINK>
    <NODE systemname="Constant (EX9.Effect)" filename="%VVVV%\lib\nodes\effects\Constant.fx" nodename="Constant (EX9.Effect)" componentmode="Hidden" id="40">
-   <BOUNDS type="Node" left="7728" top="8640" width="100" height="100">
+   <BOUNDS type="Node" left="7476" top="8280" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Mesh" visible="1">
    </PIN>
@@ -489,9 +489,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="77" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="6336" top="6324" width="2100" height="240">
+   <BOUNDS type="Node" left="6084" top="5964" width="2100" height="240">
    </BOUNDS>
-   <BOUNDS type="Box" left="6336" top="6324" width="1776" height="444">
+   <BOUNDS type="Box" left="6084" top="5964" width="1776" height="444">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Fetch seesaw bodies to render|">
    </PIN>
@@ -503,7 +503,7 @@
    </PIN>
    </NODE>
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="83">
-   <BOUNDS type="Node" left="10836" top="204" width="100" height="100">
+   <BOUNDS type="Node" left="10500" top="1332" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Saturation" slicecount="1" values="-0.41">
    </PIN>
@@ -527,7 +527,7 @@
    </PIN>
    </NODE>
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="85">
-   <BOUNDS type="Node" left="11040" top="612" width="100" height="100">
+   <BOUNDS type="Node" left="10704" top="1740" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Saturation" slicecount="1" values="1">
    </PIN>
@@ -539,7 +539,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Zip (Color)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Color)" componentmode="Hidden" id="89">
-   <BOUNDS type="Node" left="10884" top="2484" width="100" height="100">
+   <BOUNDS type="Node" left="10548" top="3612" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -561,7 +561,7 @@
    <LINK srcnodeid="85" srcpinname="Output" dstnodeid="89" dstpinname="Input 2">
    </LINK>
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="11256" top="1008" width="100" height="100">
+   <BOUNDS type="Node" left="10920" top="2136" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Saturation" slicecount="1" values="1">
    </PIN>
@@ -575,7 +575,7 @@
    <LINK srcnodeid="90" srcpinname="Output" dstnodeid="89" dstpinname="Input 3">
    </LINK>
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="91">
-   <BOUNDS type="Node" left="11448" top="1440" width="100" height="100">
+   <BOUNDS type="Node" left="11112" top="2568" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -587,7 +587,7 @@
    <LINK srcnodeid="91" srcpinname="Output" dstnodeid="89" dstpinname="Input 4">
    </LINK>
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="92">
-   <BOUNDS type="Node" left="11568" top="1944" width="100" height="100">
+   <BOUNDS type="Node" left="11232" top="3072" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -621,7 +621,7 @@
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="50" dstpinname="Custom">
    </LINK>
    <NODE systemname="S (Color)" nodename="S (Color)" componentmode="Hidden" id="103">
-   <BOUNDS type="Node" left="10884" top="2868" width="100" height="100">
+   <BOUNDS type="Node" left="10548" top="3996" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -649,7 +649,7 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="114">
-   <BOUNDS type="Node" left="8616" top="9516" width="100" height="100">
+   <BOUNDS type="Node" left="8364" top="9156" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="FallingBoxBodiesRender">
    </PIN>
@@ -675,11 +675,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7872" top="3504" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="864" top="1068" width="11904" height="7896">
+   <BOUNDS type="Window" left="6408" top="2088" width="8976" height="7896">
    </BOUNDS>
    </NODE>
    <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="119">
-   <BOUNDS type="Node" left="8424" top="9072" width="100" height="100">
+   <BOUNDS type="Node" left="8172" top="8712" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -688,66 +688,54 @@
    </NODE>
    <LINK srcnodeid="119" srcpinname="Input Value" dstnodeid="22" dstpinname="Layer 2">
    </LINK>
-   <NODE systemname="GetContactDetails (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="GetContactDetails (Box2d)" componentmode="Hidden" id="121">
-   <BOUNDS type="Node" left="9936" top="6972" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="World" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Body 1" visible="1">
-   </PIN>
-   <PIN pinname="Body 2" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="122">
-   <BOUNDS type="Node" left="9948" top="6480" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   <PIN pinname="Receive String" slicecount="1" values="Box2DWorld">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="122" srcpinname="Input Value" dstnodeid="121" dstpinname="World">
-   </LINK>
-   <NODE systemname="GetBodyDetails (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="GetBodyDetails (Box2d)" componentmode="Hidden" id="123">
-   <BOUNDS type="Node" left="11088" top="7920" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Bodies" visible="1">
-   </PIN>
-   <PIN pinname="Filter Persisted" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="HasContact (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="HasContact (Box2d)" componentmode="Hidden" id="125">
-   <BOUNDS type="Node" left="11736" top="5820" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="World" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="121" srcpinname="Body 1" dstnodeid="123" dstpinname="Bodies">
-   </LINK>
-   <NODE systemname="GetBodyDetails (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="GetBodyDetails (Box2d)" componentmode="Hidden" id="129">
-   <BOUNDS type="Node" left="11256" top="7476" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Bodies" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="121" srcpinname="Body 2" dstnodeid="129" dstpinname="Bodies">
-   </LINK>
-   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="131">
-   <BOUNDS type="Node" left="11760" top="4584" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   <PIN pinname="Receive String" slicecount="1" values="Box2DWorld">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="131" srcpinname="Input Value" dstnodeid="125" dstpinname="World">
-   </LINK>
    <NODE systemname="DeleteFallingBoxes" filename="DeleteFallingBoxes.v4p" componentmode="Hidden" id="132" nodename="DeleteFallingBoxes.v4p">
-   <BOUNDS type="Node" left="8316" top="4704" width="100" height="100">
+   <BOUNDS type="Node" left="7908" top="4104" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8316" top="4704" width="4800" height="3600">
+   <BOUNDS type="Box" left="7908" top="4104" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="1056" top="732" width="14460" height="11148">
+   <BOUNDS type="Window" left="6396" top="4788" width="13608" height="6780">
    </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="133" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6228" top="2292" width="2448" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6228" top="2292" width="1500" height="852">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|define colours to select bodies later|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="134" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="11916" top="3732" width="1080" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11916" top="3732" width="1080" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|define colours|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="135" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3348" top="7560" width="1740" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3348" top="7560" width="1728" height="480">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|create falling box bodies|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
    </NODE>
    </PATCH>

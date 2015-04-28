@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\SetFallingBoxesColours.v4p" systemname="SetFallingBoxesColours" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\SetFallingBoxesColours.v4p" scrollx="0" scrolly="120">
+   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches\Seesaw Game v2\SetFallingBoxesColours.v4p" systemname="SetFallingBoxesColours" filename="C:\Users\melmo\Documents\Career\Node 15\Box2D Workshop Patches v2\SetFallingBoxesColours.v4p" scrollx="0" scrolly="120">
    <BOUNDS type="Window" left="3084" top="288" width="16020" height="10212">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
@@ -618,4 +618,18 @@
    </NODE>
    <LINK srcnodeid="12" srcpinname="Custom" dstnodeid="50" dstpinname="Input String">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="51" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="10476" top="2088" width="3984" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10476" top="2088" width="3684" height="1356">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|filter the boxes by name then assign them different colours|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
