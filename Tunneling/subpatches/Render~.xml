@@ -1,0 +1,363 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\melmo\Documents\Career\Node 15\vvvv\box2d playground_v1.1\Subpatches\Render.v4p" filename="D:\box2d playground\Subpatches\Render.v4p" systemname="Render" scrollx="0" scrolly="0">
+   <BOUNDS height="9900" left="3300" top="576" type="Window" width="9660">
+   </BOUNDS>
+   <LINK dstnodeid="390" dstpinname="Input 6" hiddenwhenlocked="1" srcnodeid="37" srcpinname="Is Dynamic">
+   </LINK>
+   <LINK dstnodeid="742" dstpinname="IsDynamic" srcnodeid="37" srcpinname="Is Dynamic">
+   </LINK>
+   <LINK dstnodeid="742" dstpinname="CustomName" srcnodeid="37" srcpinname="Custom">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="Bodies" srcnodeid="747" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="667" dstpinname="Input Value" srcnodeid="747" srcpinname="Input Index">
+   </LINK>
+   <LINK dstnodeid="39" dstpinname="Bodies" srcnodeid="748" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="682" dstpinname="Input Value" srcnodeid="748" srcpinname="Input Index">
+   </LINK>
+   <LINK dstnodeid="323" dstpinname="Bodies" srcnodeid="750" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="698" dstpinname="Input Value" srcnodeid="750" srcpinname="Input Index">
+   </LINK>
+   <LINK dstnodeid="747" dstpinname="Send String" srcnodeid="668" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="748" dstpinname="Send String" srcnodeid="751" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="750" dstpinname="Send String" srcnodeid="752" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="Hidden" filename="PreviewShape.v4p" id="624" nodename="Subpatches\PreviewShape.v4p" systemname="PreviewShape">
+   <BOUNDS height="100" left="915" top="615" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="9096" left="6468" top="1068" type="Window" width="14256">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS left="915" top="615" type="Box">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="InAWindow" filename="Boxes.v4p" id="785" nodename="Subpatches\Boxes.v4p" stayontop="0" systemname="Boxes">
+   <BOUNDS height="270" left="2475" top="1215" type="Node" width="1005">
+   </BOUNDS>
+   <BOUNDS height="3600" left="2475" top="1215" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="10710" left="7650" top="2505" type="Window" width="7020">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|0.13067,0.13067,0.13067,1.00000|">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" slicecount="1" visible="-1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="Circles.v4p" id="786" nodename="Subpatches\Circles.v4p" systemname="Circles">
+   <BOUNDS height="270" left="4020" top="1215" type="Node" width="990">
+   </BOUNDS>
+   <BOUNDS height="3600" left="4020" top="1215" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="10215" left="5025" top="1005" type="Window" width="6525">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|0.12883,0.12883,0.12883,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Layer 3" srcnodeid="786" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" filename="Triangles.v4p" id="787" nodename="Subpatches\Triangles.v4p" systemname="Triangles">
+   <BOUNDS height="100" left="5580" top="1215" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="5580" top="1215" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="11415" left="1515" top="165" type="Window" width="8400">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|0.12883,0.12883,0.12883,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Layer 4" srcnodeid="787" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" filename="Outlines.v4p" id="788" nodename="Subpatches\Outlines.v4p" systemname="Outlines">
+   <BOUNDS height="270" left="4050" top="4425" type="Node" width="1035">
+   </BOUNDS>
+   <BOUNDS height="3600" left="4050" top="4425" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="10770" left="1935" top="1440" type="Window" width="8985">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.01719,0.66795,0.86194,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Layer 5" srcnodeid="788" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" filename="Contacts.v4p" id="790" nodename="Subpatches\Contacts.v4p" systemname="Contacts">
+   <BOUNDS height="100" left="5610" top="4425" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="5610" top="4425" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="7275" left="1170" top="2295" type="Window" width="5580">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Scale" slicecount="1" values="0.01">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Layer 6" srcnodeid="790" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" filename="Joints.v4p" id="791" nodename="Subpatches\Joints.v4p" systemname="Joints">
+   <BOUNDS height="270" left="2505" top="4425" type="Node" width="1035">
+   </BOUNDS>
+   <BOUNDS height="3600" left="2505" top="4425" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="10155" left="1065" top="1425" type="Window" width="6930">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Scale" slicecount="1" visible="1" values="0.02">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Color - Color" slicecount="1" values="|0.11449,0.67263,0.97219,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Layer 7" srcnodeid="791" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" id="792" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="930" top="2175" type="Node" width="6240">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Layer 5" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Layer 6" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Layer 7" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" debug="0" id="793" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="930" top="5550" type="Node" width="6300">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Layer 5" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Layer 6" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Layer 7" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="793" dstpinname="Layer 1" srcnodeid="792" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="792" dstpinname="Layer 3" srcnodeid="786" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="792" dstpinname="Layer 4" srcnodeid="787" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="792" dstpinname="Layer 1" srcnodeid="624" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" id="794" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="915" top="7095" type="Node" width="1845">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Layer 5" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Layer 6" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Layer 7" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="794" dstpinname="Layer 1" srcnodeid="793" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" filename="Subpatches\GUI.v4p" id="795" nodename="Subpatches\GUI.v4p" stayontop="1" systemname="GUI">
+   <BOUNDS height="270" left="1815" top="6525" type="Node" width="645">
+   </BOUNDS>
+   <BOUNDS height="10752" left="8304" top="840" type="Window" width="17076">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS left="1815" top="6525" type="Box">
+   </BOUNDS>
+   <PIN pinname="Switch">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" slicecount="1" visible="-1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="796" nodename="S (Node)" systemname="S (NODE)">
+   <BOUNDS height="100" left="915" top="8490" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String">
+   </PIN>
+   <PIN pinname="Display Channel" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="796" dstpinname="Input Value" srcnodeid="794" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="797" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="1170" top="7950" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="255" left="1170" top="7950" type="Box" width="1260">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="RenderLayers">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="796" dstpinname="Send String" srcnodeid="797" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="792" dstpinname="Layer 2" srcnodeid="785" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="802" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="5010" top="3255" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="5010" top="3255" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="788" dstpinname="Enabled" srcnodeid="802" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="803" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="6555" top="3255" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="6555" top="3255" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="790" dstpinname="Enabled" srcnodeid="803" srcpinname="Y Output Value">
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="808" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="4035" top="5025" width="600" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" pintype="Input">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="788" srcpinname="Layer" dstnodeid="808" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="808" srcpinname="Layer" dstnodeid="793" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="809" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5625" top="5025" width="600" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" pintype="Input">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="790" srcpinname="Layer" dstnodeid="809" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="809" srcpinname="Layer" dstnodeid="793" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="802" srcpinname="Y Output Value" dstnodeid="808" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="802" srcpinname="Y Output Value" dstnodeid="788" dstpinname="Evaluate" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="803" srcpinname="Y Output Value" dstnodeid="790" dstpinname="Evaluate" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="803" srcpinname="Y Output Value" dstnodeid="809" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="810" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7185" top="3240" width="8580" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7185" top="3240" width="2295" height="990">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="|Outlines and contacts can eat up much performance when having lot of objects on scene. Disable to save some ticks.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="791" srcpinname="Layer" dstnodeid="793" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="795" srcpinname="Layer" dstnodeid="794" dstpinname="Layer 2">
+   </LINK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   </PATCH>
