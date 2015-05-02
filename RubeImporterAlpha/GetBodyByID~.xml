@@ -1,0 +1,145 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\melmo\Documents\Study\Third Year\vvvv Patches\Box2D Messing About\mel_subpatches\GetBodyByID.v4p" systemname="GetBodyByID" filename="C:\Users\melmo\Documents\Study\Third Year\vvvv Patches\Box2D Messing About\mel_subpatches\GetBodyByID.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="4356" top="2652" width="8424" height="8148">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE componentmode="Hidden" debug="0" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" id="21" nodename="GetBodyDetails (Box2d)" systemname="GetBodyDetails (Box2d)">
+   <BOUNDS height="270" left="1602" top="1116" type="Node" width="1200">
+   </BOUNDS>
+   <PIN pinname="Bodies" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="PositionXY" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom" visible="1">
+   </PIN>
+   <PIN pinname="Shapes" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Rotation" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Body Id" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Shape Count" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Shape Types" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Inertia" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mass" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Is Frozen" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Is Sleeping" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Is Dynamic" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="VelocityXY" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Filter Persisted" pintype="Input" slicecount="1" visible="0" values="0">
+   </PIN>
+   <PIN pinname="LifeTime" pintype="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="1602" top="300" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1602" top="300" width="792" height="240">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="WorldBodies">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output Node" dstnodeid="21" dstpinname="Bodies">
+   </LINK>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="3540" top="2244" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Filter" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Filter Index" visible="1">
+   </PIN>
+   <PIN pinname="Hits" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Body Id" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="26">
+   <BOUNDS type="Node" left="3744" top="1608" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3744" top="1608" width="792" height="240">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="BodyID">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Filter">
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" id="27" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
+   <BOUNDS height="100" left="3192" top="4008" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="2" values="0">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="28">
+   <BOUNDS type="Node" left="3204" top="4668" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3204" top="4668" width="792" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="IDBodies">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output Node" dstnodeid="28" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output Node" dstnodeid="27" dstpinname="Input Node">
+   <LINKPOINT x="1059" y="822">
+   </LINKPOINT>
+   <LINKPOINT x="1062" y="3072">
+   </LINKPOINT>
+   <LINKPOINT x="3213" y="3378">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Occurrence (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (Value)" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="4500" top="2664" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (Value Vector)" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" nodename="Select (Value Vector)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="3828" top="3324" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="27" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Input Index" dstnodeid="39" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Count" dstnodeid="39" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="33" dstpinname="Input">
+   </LINK>
+   </PATCH>

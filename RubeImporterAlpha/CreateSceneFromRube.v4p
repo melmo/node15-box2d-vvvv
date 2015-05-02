@@ -1,0 +1,295 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\melmo\Documents\Art\Node15\Box2D Workshop Patches\RubeImporterAlpha\CreateSceneFromRube.v4p" systemname="CreateBodyFromRube" filename="C:\Users\melmo\Documents\Study\Third Year\vvvv Patches\Box2D Messing About\mel_subpatches\CreateBodyFromRube.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="1956" top="1176" width="13644" height="9660">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE systemname="AsXElement (JSON)" filename="%VVVV%\addonpack\lib\nodes\plugins\JSONStringAsElement.dll" nodename="AsXElement (JSON)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="3552" top="2736" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Element" visible="1">
+   </PIN>
+   <PIN pinname="JSON" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Reader (String)" filename="%VVVV%\lib\nodes\modules\String\Reader (String).v4p" nodename="Reader (String)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="3552" top="2232" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Read" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" visible="1" values="..\files\ball.txt">
+   </PIN>
+   <PIN pinname="Content" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Content" dstnodeid="11" dstpinname="JSON">
+   </LINK>
+   <NODE systemname="Prune (XElement)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Prune (XElement)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="3540" top="3252" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Element" visible="1">
+   </PIN>
+   <PIN pinname="Queries" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Elements" visible="1">
+   </PIN>
+   <PIN pinname="XPath" slicecount="1" values="./body/item">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Element" dstnodeid="9" dstpinname="Element">
+   </LINK>
+   <NODE systemname="Element (XElement Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Element (XElement Split)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="600" top="4392" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Element" visible="1">
+   </PIN>
+   <PIN pinname="Children" visible="1">
+   </PIN>
+   <PIN pinname="Attributes" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Elements" dstnodeid="8" dstpinname="Element">
+   </LINK>
+   <NODE systemname="Element (XElement Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Element (XElement Split)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="1080" top="4920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Element" visible="1">
+   </PIN>
+   <PIN pinname="Attributes" visible="1">
+   </PIN>
+   <PIN pinname="Name" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="Children" visible="1">
+   </PIN>
+   <PIN pinname="Next" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Children" dstnodeid="7" dstpinname="Element">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="6">
+   <BOUNDS type="Node" left="1896" top="5544" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1896" top="5544" width="1056" height="2628">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Value" dstnodeid="6" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="624" top="5508" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="624" top="5508" width="1056" height="2628">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Name" dstnodeid="5" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="CreateBody (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="CreateBody (Box2d)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="3588" top="6744" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Angle" visible="1" slicecount="19" values="-0.0124781663861606,-0.0124781663861606,-0.0124781663861606,0.0487983822997965,0.00610342374371654,0.00610342374371654,-0.0277278678740099,-0.0277278678740099,-0.0277278678740099,0.0487983822997965,0,-0.0430897716675356,-0.0430897716675356,-0.0430897716675356,-0.0822915694925292,0,-0.0277278678740099,-0.0277278678740099,-0.0277278678740099">
+   </PIN>
+   <PIN pinname="Angular Velocity" visible="1">
+   </PIN>
+   <PIN pinname="Custom" visible="1">
+   </PIN>
+   <PIN pinname="World" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Shapes" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Do Create" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1" slicecount="38" values="63.2689590454102,22.6233177185059,20.1803588867188,58.992919921875,44.4665603637695,38.6590194702148,16.8474578857422,60.8166198730469,-20.6366386413574,60.2216186523438,-14.9843368530273,8.45779800415039,12.9800605773926,-37.0586814880371,12.682559967041,-69.7829818725586,12.9800605773926,4.88789796829224,12.9800605773926,8.45779800415039,-1.00214004516602,83.1286163330078,-46.2685585021973,39.150318145752,-21.8520393371582,59.3277168273926,-65.4599380493164,23.582218170166,-1.29953765869141,26.6050186157227,-1.29953765869141,11.7302179336548,-15.2818374633789,-69.7829818725586,-14.9843368530273,-37.0586814880371,-14.9843368530273,4.88788795471191">
+   </PIN>
+   <PIN pinname="Linear Damping" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Angular Damping" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Is Bullet" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="3372" top="4980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="Box2DWorld">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Input Value" dstnodeid="1" dstpinname="World">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="53">
+   <BOUNDS type="Node" left="5052" top="420" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Reset">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="54">
+   <BOUNDS type="Node" left="5052" top="1560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="53" srcpinname="Input Value" dstnodeid="54" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="1" dstpinname="Do Create">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="55">
+   <BOUNDS type="Node" left="5460" top="924" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5460" top="924" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Active">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="54" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="72">
+   <BOUNDS type="Node" left="3540" top="1728" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3540" top="1728" width="792" height="240">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Filename">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="72" srcpinname="Output String" dstnodeid="10" dstpinname="Filename">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="173" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="540" top="876" width="528" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="540" top="876" width="1980" height="900">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|to do:&cr;&lf;- edge chains ???&cr;&lf;- joints&cr;&lf;- fix group index&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Circle (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="Circle (Box2d)" componentmode="Hidden" id="201">
+   <BOUNDS type="Node" left="3684" top="6156" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Radius" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Density" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Friction" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Restitution" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Is Sensor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Custom" slicecount="1" values="initShape">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="201" srcpinname="Output" dstnodeid="1" dstpinname="Shapes">
+   </LINK>
+   <NODE systemname="CreateShapesFromRube" filename="CreateShapesFromRube.v4p" componentmode="Hidden" id="306" nodename="CreateShapesFromRube.v4p">
+   <BOUNDS type="Node" left="6216" top="4416" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6216" top="4416" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="252" top="2448" width="18204" height="9324">
+   </BOUNDS>
+   <PIN pinname="DoCreate" visible="1">
+   </PIN>
+   <PIN pinname="BodyDefinition" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="306" dstpinname="DoCreate">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Elements" dstnodeid="306" dstpinname="BodyDefinition">
+   </LINK>
+   <NODE systemname="GetRubeBodyDetails" filename="GetRubeBodyDetails.v4p" componentmode="Hidden" id="307" nodename="GetRubeBodyDetails.v4p">
+   <BOUNDS type="Node" left="3492" top="4428" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3492" top="4428" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="6108" top="588" width="15024" height="8292">
+   </BOUNDS>
+   <PIN pinname="BodyDefinition" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="Rotation" visible="1">
+   </PIN>
+   <PIN pinname="AngularVelocity" visible="1">
+   </PIN>
+   <PIN pinname="Name" visible="1">
+   </PIN>
+   <PIN pinname="Type" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Elements" dstnodeid="307" dstpinname="BodyDefinition">
+   </LINK>
+   <LINK srcnodeid="307" srcpinname="Position" dstnodeid="1" dstpinname="PositionXY">
+   </LINK>
+   <LINK srcnodeid="307" srcpinname="Rotation" dstnodeid="1" dstpinname="Angle">
+   </LINK>
+   <LINK srcnodeid="307" srcpinname="AngularVelocity" dstnodeid="1" dstpinname="Angular Velocity">
+   </LINK>
+   <LINK srcnodeid="307" srcpinname="Name" dstnodeid="1" dstpinname="Custom">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="10" dstpinname="Read">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="308" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9708" top="6840" width="6468" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9708" top="6840" width="3636" height="2280">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|This subpatch takes a RUBE output file and creates the bodies, shapes and joints defined in the file.&cr;&lf;&cr;&lf;First the bodies are created with a small, sensor, circle fixture at origin.&cr;&lf;&cr;&lf;In the next frame, the shapes/fixtures are attached to the bodies.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="CreateJointsFromRube" filename="CreateJointsFromRube.v4p" componentmode="Hidden" id="312" nodename="CreateJointsFromRube.v4p">
+   <BOUNDS type="Node" left="9312" top="4476" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9312" top="4476" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1260" top="2244" width="21564" height="9672">
+   </BOUNDS>
+   <PIN pinname="BodyDefinition" visible="1">
+   </PIN>
+   <PIN pinname="DoCreate" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Element" dstnodeid="312" dstpinname="RubeInputFile">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="312" dstpinname="DoCreate">
+   </LINK>
+   <LINK srcnodeid="307" srcpinname="Type" dstnodeid="201" dstpinname="Density">
+   </LINK>
+   </PATCH>

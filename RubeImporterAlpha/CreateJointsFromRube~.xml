@@ -1,0 +1,575 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\melmo\Documents\Study\Third Year\vvvv Patches\Box2D Messing About\mel_subpatches\CreateJointsFromRube.v4p" systemname="CreateJointsFromRube" filename="C:\Users\melmo\Documents\Study\Third Year\vvvv Patches\Box2D Messing About\mel_subpatches\CreateJointsFromRube.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="1476" top="2004" width="21564" height="9684">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE systemname="Prune (XElement)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Prune (XElement)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="552" top="1224" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XPath" slicecount="1" values="./joint">
+   </PIN>
+   <PIN pinname="Elements" visible="1">
+   </PIN>
+   <PIN pinname="Element" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Element (XElement Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Element (XElement Split)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="552" top="1728" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Element" visible="1">
+   </PIN>
+   <PIN pinname="Name" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="Children" visible="1">
+   </PIN>
+   <PIN pinname="Attributes" visible="1">
+   </PIN>
+   <PIN pinname="Children Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Parent" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Elements" dstnodeid="5" dstpinname="Element">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="0" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="564" top="840" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="564" top="840" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="RubeInputFile">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output Node" dstnodeid="6" dstpinname="Element">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="56" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="8472" top="348" width="3768" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8472" top="348" width="5328" height="276">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|select bodies based on their index (position) in input file|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="57" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="8508" top="828" width="1560" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8508" top="828" width="4284" height="288">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|add collide connected - need to check for nulls|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="58" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="8484" top="1260" width="2856" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8484" top="1260" width="3792" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|do x and y position - may need to reorder|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="CreateLineJoint (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="CreateLineJoint (Box2d)" componentmode="Hidden" id="59">
+   <BOUNDS type="Node" left="13656" top="7032" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="CreateMouseJoint (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="CreateMouseJoint (Box2d)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="7848" top="6828" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="CreatePulleyJoint (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="CreatePulleyJoint (Box2d)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="10296" top="6852" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="CreatePrismaticJoint (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="CreatePrismaticJoint (Box2d)" componentmode="Hidden" id="63">
+   <BOUNDS type="Node" left="16332" top="6996" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="CreateRevoluteJointFromRube" filename="CreateRevoluteJointFromRube.v4p" componentmode="Hidden" id="65" nodename="CreateRevoluteJointFromRube.v4p">
+   <BOUNDS type="Node" left="1836" top="6672" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1836" top="6672" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1332" top="852" width="21168" height="10380">
+   </BOUNDS>
+   <PIN pinname="DoCreate" visible="1">
+   </PIN>
+   <PIN pinname="RevoluteJointDefs" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="66">
+   <BOUNDS type="Node" left="20160" top="528" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="20160" top="528" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="DoCreate">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetElements (XElement ByName)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="GetElements (XElement ByName)" componentmode="Hidden" id="67">
+   <BOUNDS type="Node" left="1056" top="2232" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Name" slicecount="1" values="type">
+   </PIN>
+   <PIN pinname="Element" visible="1">
+   </PIN>
+   <PIN pinname="Elements" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Element (XElement Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Element (XElement Split)" componentmode="Hidden" id="68">
+   <BOUNDS type="Node" left="1068" top="2676" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Element" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="Attributes" visible="1">
+   </PIN>
+   <PIN pinname="Document Root" visible="1">
+   </PIN>
+   <PIN pinname="Parent" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="67" srcpinname="Elements" dstnodeid="68" dstpinname="Element">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="1356" top="4884" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="71" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="1548" top="4452" width="684" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1548" top="4452" width="984" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="revolute">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Output String" dstnodeid="70" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Value" dstnodeid="70" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Children" dstnodeid="67" dstpinname="Element">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="77">
+   <BOUNDS type="Node" left="1848" top="6192" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Parent" dstnodeid="77" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="77" srcpinname="Output Node" dstnodeid="65" dstpinname="RevoluteJointDefs">
+   </LINK>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="85">
+   <BOUNDS type="Node" left="1356" top="5376" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Find" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Filter Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="85" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Input Index" dstnodeid="77" dstpinname="Index">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="89">
+   <BOUNDS type="Node" left="5148" top="4740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="88" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5340" top="4308" width="684" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5340" top="4308" width="984" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="distance">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Output String" dstnodeid="89" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="5640" top="6048" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="5148" top="5232" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Find" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Filter Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Output" dstnodeid="86" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Input Index" dstnodeid="87" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Value" dstnodeid="89" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="93">
+   <BOUNDS type="Node" left="7872" top="4704" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="92" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="8064" top="4272" width="684" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8064" top="4272" width="984" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="mouse">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="92" srcpinname="Output String" dstnodeid="93" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="8364" top="6012" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="7872" top="5196" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Find" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Filter Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="Output" dstnodeid="90" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Input Index" dstnodeid="91" dstpinname="Index">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="97">
+   <BOUNDS type="Node" left="10536" top="4536" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="96" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="10596" top="2808" width="684" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10596" top="2808" width="984" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="pulley">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Output String" dstnodeid="97" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="11028" top="5844" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="94">
+   <BOUNDS type="Node" left="10536" top="5028" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Find" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Filter Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="97" srcpinname="Output" dstnodeid="94" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="Input Index" dstnodeid="95" dstpinname="Index">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="13272" top="4572" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="100" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="13464" top="4140" width="684" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13464" top="4140" width="984" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="line">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="100" srcpinname="Output String" dstnodeid="101" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="99">
+   <BOUNDS type="Node" left="13764" top="5880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="13272" top="5064" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Find" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Filter Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="98" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Input Index" dstnodeid="99" dstpinname="Index">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="105">
+   <BOUNDS type="Node" left="16212" top="4452" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="104" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="16272" top="2724" width="684" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16272" top="2724" width="984" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="prismatic">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="104" srcpinname="Output String" dstnodeid="105" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="103">
+   <BOUNDS type="Node" left="16704" top="5760" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="16212" top="4944" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Find" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Filter Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="105" srcpinname="Output" dstnodeid="102" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Input Index" dstnodeid="103" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Value" dstnodeid="93" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Value" dstnodeid="97" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Value" dstnodeid="101" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Value" dstnodeid="105" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Parent" dstnodeid="87" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Parent" dstnodeid="91" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Parent" dstnodeid="95" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Parent" dstnodeid="99" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Parent" dstnodeid="103" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="107">
+   <BOUNDS type="Node" left="19956" top="4296" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="19956" top="4296" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="106">
+   <BOUNDS type="Node" left="19956" top="3012" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="106" srcpinname="Output 1" dstnodeid="107" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="106" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="107" srcpinname="Y Output Value" dstnodeid="65" dstpinname="DoCreate">
+   <LINKPOINT x="19824" y="6084">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="CreateDistanceJointFromRube" filename="CreateDistanceJointFromRube.v4p" componentmode="Hidden" id="108" nodename="CreateDistanceJointFromRube.v4p">
+   <BOUNDS type="Node" left="4800" top="6888" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4800" top="6888" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="408" top="2616" width="14544" height="9132">
+   </BOUNDS>
+   <PIN pinname="RevoluteJointDefs" visible="1">
+   </PIN>
+   <PIN pinname="DoCreate" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Output Node" dstnodeid="108" dstpinname="RevoluteJointDefs">
+   </LINK>
+   <LINK srcnodeid="107" srcpinname="Y Output Value" dstnodeid="108" dstpinname="DoCreate">
+   <LINKPOINT x="19308" y="7206">
+   </LINKPOINT>
+   </LINK>
+   </PATCH>

@@ -1,0 +1,193 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\melmo\Documents\Study\Third Year\vvvv Patches\Man and Kinect\mel_subpatches\CreateMouseJoints.v4p" systemname="CreateMouseJoints" filename="C:\Users\melmo\Documents\Study\Third Year\vvvv Patches\Man and Kinect\mel_subpatches\CreateMouseJoints.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="3972" top="1464" width="12528" height="8976">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE systemname="CreateMouseJoint (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="CreateMouseJoint (Box2d)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="1392" top="4380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="World" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Body" visible="1" slicecount="3" values=",,">
+   </PIN>
+   <PIN pinname="Do Create" visible="1">
+   </PIN>
+   <PIN pinname="TargetXY" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" values="30">
+   </PIN>
+   <PIN pinname="Damping Ratio" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Joint Id" visible="1">
+   </PIN>
+   <PIN pinname="Custom" visible="1">
+   </PIN>
+   <PIN pinname="Prevent Double" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="1452" top="1596" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="Box2DWorld">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Input Value" dstnodeid="9" dstpinname="World">
+   </LINK>
+   <NODE id="7" componentmode="Hidden" systemname="GetBodyByCustom" filename="..\..\Metaboids\subpatches\GetBodyByCustom.v4p" nodename="subpatches\GetBodyByCustom.v4p" hiddenwhenlocked="0" managers="">
+   <PIN pinname="NameBodies" visible="1">
+   </PIN>
+   <PIN pinname="Name" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="1884" top="2028" width="17604" height="8640">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1668" top="2316" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="CircleBodies" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="WorldBodies" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="BoxBodies" visible="1" pintype="Output">
+   </PIN>
+   <BOUNDS type="Box" left="0" top="528" width="4800" height="3600">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="TriangleBodies" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1668" top="1968" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="Box2DBodies">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="7" dstpinname="WorldBodies">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="3216" top="756" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3216" top="756" width="804" height="840">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="3" values="head,hand_l,hand_r">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="JointNames">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="7" dstpinname="Name">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="NameBodies" dstnodeid="9" dstpinname="Body">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="4704" top="2724" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4704" top="2724" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="9" dstpinname="Custom">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="4716" top="1284" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="Box2DResetWorld">
+   </PIN>
+   </NODE>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="4704" top="1692" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Input Value" dstnodeid="1" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="4704" top="2112" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output 1" dstnodeid="0" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output 1" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GetBodyDetails (Box2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\vuxbins\Box2dNodes.dll" nodename="GetBodyDetails (Box2d)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="1860" top="3084" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bodies" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="NameBodies" dstnodeid="12" dstpinname="Bodies">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="PositionXY" dstnodeid="9" dstpinname="TargetXY">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="13">
+   <BOUNDS type="Node" left="7236" top="1872" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7236" top="1872" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="IsActive">
+   </PIN>
+   </NODE>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="4824" top="3912" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="9" dstpinname="Do Create">
+   </LINK>
+   </PATCH>
